@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Cross Plattform</title>
+</head>
+
+<body style="background-color: rgb(255, 255, 255); height: 100%;">
+    <div class="flex-container">
+        <div class="flex-item-menu">
+            <p><button type="button" onclick="navigation(this)" url="https://compress-video-online.com/zh/">在线视频压缩</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://c.runoob.com/front-end/854/">正则表达式在线测试</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://wallhaven.cc/">壁纸wallhaven</button></p>
+        </div>
+        <div class="flex-item-content">
+            <iframe id="id-iframe-content" src="https://compress-video-online.com/zh/" width="100%" height="100%" frameborder="1" name="iframe-content" scrolling="auto">
+            </iframe>
+        </div>
+      </div>
+    <script>
+        console.log("index.html loaded successfully.");
+        function navigation(e) {
+            document.getElementById("id-iframe-content").src = e.getAttribute("url");
+        }
+    </script>
+</body>
+
+<style>
+    .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-item-menu {
+    width: 20%;
+    height: 100%;
+}
+.flex-item-content {
+    width: 80%;
+    height: 100%;
+}
+</style>
+
+</style>
+</html>
