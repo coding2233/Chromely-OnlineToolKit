@@ -39,15 +39,15 @@ namespace Chromely.Integration.TestApp
 
             var appDirectory = AppDomain.CurrentDomain.BaseDirectory;
             CiTrace("AppDirectory", appDirectory);
-            var startUrl = $"file:///{appDirectory}/index.html";
-            //var startUrl = "https://coding2233.github.io/webgl/imgui/index.html";
+            //var startUrl = $"file:///{appDirectory}/index.html";
+            var startUrl = "https://coding2233.github.io/html/toolkit/index.html";            
 
             var config = DefaultConfiguration.CreateForRuntimePlatform();
             config.CefDownloadOptions = new CefDownloadOptions(true, true);
             config.WindowOptions.Position = new WindowPosition(0, 0);//1,2
             config.WindowOptions.Size = new WindowSize(1280, 720);
             config.StartUrl = startUrl;
-            config.DebuggingMode = true;
+            //config.DebuggingMode = true;
             config.WindowOptions.RelativePathToIconFile = "chromely.ico";
             config.WindowOptions.Title = "Online Tool Kit";
 

@@ -8,19 +8,50 @@
 <body style="background-color: rgb(255, 255, 255); height: 100%;">
     <div class="flex-container">
         <div class="flex-item-menu">
+            <p><button type="button" onclick="navigation(this)" url="https://unitylist.com/">Unity资源搜索</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://unityitellyou.github.io/">Unity I Tell You: Unity官方镜像下载</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://www.runoob.com/">菜鸟</button></p>
             <p><button type="button" onclick="navigation(this)" url="https://compress-video-online.com/zh/">在线视频压缩</button></p>
-            <p><button type="button" onclick="navigation(this)" url="https://c.runoob.com/front-end/854/">正则表达式在线测试</button></p>
-            <p><button type="button" onclick="navigation(this)" url="https://wallhaven.cc/">壁纸wallhaven</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://app.diagrams.net/" target="_blank">画图工具 Draw.io</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://wallhaven.cc/" target="_blank">Awesome Wallpaper</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://tinypng.com/" target="_blank">图片压缩 tinypng</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://app.tmp.link/">临时大文件分享 TMP.link</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://docsmall.com/">图片压缩 docsmall</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://www.pdfpai.com/">PDF派:20个免费好用的PDF在线工具</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://tophub.today/" target="_blank">今日热榜</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://www.kapwing.com/" target="_blank">Kapwing:一个用于创建图像，视频和GIF的协作平台</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://www.remove.bg/zh" target="_blank">removebg:抠图神器</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://imgkr.com/">图壳：免费好用稳定的图床网站。</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://catlikecoding.com/unity/tutorials/">Unity高质量教程</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://blog.csdn.net/initphp/category_9293184.html">Lua源码分析</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://zhuanlan.zhihu.com/p/26217154" target="_blank">字体优化方向 Signed Distance Field</button></p>
+            <p><button type="button" onclick="navigation(this)" url="http://chicai.group/?p=1499">Unity魔改Addressables</button></p>
+            <p><button type="button" onclick="navigation(this)" url="http://www.javashuo.com/article/p-ekeesjnf-kt.html">libevent编程疑难解答</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://aceld.gitbooks.io/libevent/content/chapter1.html">Libevent深入浅出</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://www.flaticon.com/" target="_blank">图标 flaticon</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://freeicons.io/" target="_blank">图标 freeicons</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://91maketop.github.io/ta/#/README">Unity小白的TA之路 - Shader</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://learnopengl.com/">learnopengl</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://learnvulkan.com/">learnvulkan.com</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://zhuanlan.zhihu.com/p/64138757" target="_blank">Unity URP 描边</button></p>
+            <p><button type="button" onclick="navigation(this)" url="http://www.nirsoft.net/utils/dll_export_viewer.html">C/C++ Dll导出函数查看工具</button></p>
+            <p><button type="button" onclick="navigation(this)" url="https://hoppscotch.io/cn" target="_blank">Postwoman/hoppscotch： 接口调试</button></p>
         </div>
         <div class="flex-item-content">
-            <iframe id="id-iframe-content" src="https://compress-video-online.com/zh/" width="100%" height="100%" frameborder="1" name="iframe-content" scrolling="auto">
+            <iframe id="id-iframe-content" src="https://unitylist.com/" width="100%" height="100%" frameborder="1" name="iframe-content" scrolling="auto" loading="lazy">
             </iframe>
         </div>
       </div>
     <script>
         console.log("index.html loaded successfully.");
         function navigation(e) {
-            document.getElementById("id-iframe-content").src = e.getAttribute("url");
+            var url = e.getAttribute("url");
+            if (e.getAttribute("target")) {
+                window.open(url);
+            }else
+            {
+                document.getElementById("id-iframe-content").src = url;
+            }
         }
     </script>
 </body>
